@@ -1,0 +1,72 @@
+$maxWidth: 1680
+@mixin adaptiv-font($pcSize, $mobSize)
+    $addSize: $pcSize - $mobSize
+    $addMobSize: $addSize + $addSize * 0.7
+    @media (max-width: 767px)
+        font-size: calc( #{$mobSize + px} + #{$addMobSize} * ((100vw - 320px) / #{$maxWidth}))
+
+    @media (min-width: 767px)
+        font-size: calc( #{$mobSize + px} + #{$addSize} * (100vw / #{$maxWidth}))
+    
+@mixin r400
+  font-display: swap
+  font-family: 'Roboto Serif'
+  font-style: normal
+  font-weight: 400
+  src: url('./roboto-serif-v8-latin_latin-ext-regular.woff2') format('woff2'),  url('./roboto-serif-v8-latin_latin-ext-regular.woff') format('woff')
+
+/* roboto-serif-500italic - latin_latin-ext */
+@mixin r500
+  font-display: swap
+  font-family: 'Roboto Serif'
+  font-style: italic
+  font-weight: 500
+  src: url('./roboto-serif-v8-latin_latin-ext-500italic.woff2') format('woff2'), url('./roboto-serif-v8-latin_latin-ext-500italic.woff') format('woff')
+
+/* roboto-serif-700italic - latin_latin-ext */
+@mixin r700
+  font-display: swap
+  font-family: 'Roboto Serif'
+  font-style: italic
+  font-weight: 700
+  src: url('./roboto-serif-v8-latin_latin-ext-700italic.woff2') format('woff2'), url('./roboto-serif-v8-latin_latin-ext-700italic.woff') format('woff')
+
+/* roboto-serif-900italic - latin_latin-ext */
+@mixin r900
+  font-display: swap
+  font-family: 'Roboto Serif'
+  font-style: italic
+  font-weight: 900
+  src: url('./roboto-serif-v8-latin_latin-ext-900italic.woff2') format('woff2'), url('./roboto-serif-v8-latin_latin-ext-900italic.woff') format('woff')
+
+/* roboto-300italic - cyrillic_latin */
+@mixin roboto300
+  font-display: swap
+  font-family: 'Roboto'
+  font-style: normal
+  font-weight: 300
+  src: url('./roboto-v30-cyrillic-300.woff2') format('woff2'), url('./roboto-v30-cyrillic-300.woff') format('woff')
+
+/* roboto-500italic - cyrillic_latin */
+@mixin roboto500
+  font-display: swap
+  font-family: 'Roboto'
+  font-style: normal
+  font-weight: 500
+  src: url('./roboto-v30-cyrillic-500.woff2') format('woff2'),  url('./roboto-v30-cyrillic-500.woff') format('woff')
+
+/* roboto-700italic - cyrillic_latin */
+@mixin roboto700
+  font-display: swap
+  font-family: 'Roboto'
+  font-style: normal
+  font-weight: 700
+  src: url('./roboto-v30-cyrillic-700.woff2') format('woff2'),  url('./roboto-v30-cyrillic-700.woff') format('woff')
+
+/* roboto-900italic - cyrillic_latin */
+@mixin roboto900
+  font-display: swap
+  font-family: 'Roboto'
+  font-style: normal
+  font-weight: 900
+  src: url('./roboto-v30-cyrillic-900.woff2') format('woff2'),  url('./roboto-v30-cyrillic-900.woff') format('woff')

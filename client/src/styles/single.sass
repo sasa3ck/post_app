@@ -1,0 +1,90 @@
+@import "./main"
+@import "./fonts/fonts"
+
+.single 
+    display: flex
+    gap: 50px
+    & .content 
+        flex: 5
+        display: flex
+        flex-direction: column
+        gap: 30px
+        & img 
+            width: 100%
+            height: 300px
+            object-fit: cover
+            border-radius: 5px
+        & .postUsername
+            @include r900
+            font-size: 1.2rem
+        & .postDate
+            @include r500
+            font-size: 0.9rem
+        & .postTitle
+            @include r900
+            font-size: 1.7rem
+        & .postDesc
+            @include roboto500
+            font-size: 1.2rem
+    & .user 
+        display: flex
+        align-items: center
+        gap: 10px
+        font-size: 14px
+        & img 
+            width: 50px
+            height: 50px
+            border-radius: 50%
+            object-fit: cover
+        & span 
+            font-weight: bold
+    & .edit 
+        display: flex
+        gap: 5px
+        & img 
+            width: 20px
+            height: 20px
+            cursor: pointer
+        & h1 
+            font-size: 42px
+            color: #333
+        & p 
+            text-align: justify
+            line-height: 30px
+    & .menu 
+        flex: 2
+        display: flex
+        flex-direction: column
+        gap: 25px
+        & h1, h2
+            font-size: 1.5rem
+            @include roboto900
+            color: #555
+        & button
+            @include roboto900
+            font-size: 1rem
+        & img
+            border-radius: 15px
+    & .post 
+        display: flex
+        flex-direction: column
+        gap: 10px
+        & img 
+            width: 100%
+            height: 200px
+            object-fit: cover
+        & h2 
+            color: #555
+        & button 
+            width: max-content
+            padding: 7.5px 15px
+            border: none
+            cursor: pointer
+            color: teal
+            background-color: white
+            border: 1px solid teal
+            &:hover 
+                border: 1px solid white
+                background-color: $lightGreen
+                color: black
+                transition: .5s
